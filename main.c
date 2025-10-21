@@ -28,6 +28,41 @@ for(int i=0; i<HEIGHT; i++)
   printf("\n");
 }
 
+void drawPixel( int x,int y,char color )
+{
+
+
+    if ( x >= 0 && x < HEIGHT&& y>= 0 && y < WIDTH )
+    canvas[x][y]=color;
+    else
+        printf("Coordinates are invalid...\n");
+
+
+}
+
+    void erasePixel(int x, int y)
+{
+        if (x>= 0&&  x< HEIGHT&& y>= 0 && y< WIDTH)
+
+    canvas[x][y] ='.';
+        else
+        printf("Coordinates are not valid....\n");
+}
+
+void fillArea( int x, int y, char target, char replacement )
+{
+    if(x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) return;
+        if(canvas[x][y] != target ) return;
+        if(canvas[x] [y] == replacement) return;
+
+
+canvas[x][y] = replacement ;
+fillArea( x+1, y, target, replacement);
+fillArea(x-1, y, target, replacement);
+fillArea (x , y+1, target, replacement);
+fillArea(x , y-1, target, replacement);
+}
+
 int main()
 {
   initCanvas();
