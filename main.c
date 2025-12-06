@@ -117,3 +117,8 @@ while(HEIGHT<= 0 || HEIGHT >max_height);
  do {
             printf("Width (1-%d): ", max_width);
         scanf("%d", &WIDTH);
+
+if (WIDTH <= 0 || WIDTH > max_width)
+            {
+            printf("Invalid width! Please enter between 1 and %d\n", max_width);
+        }
