@@ -108,3 +108,6 @@ do {
 
 }
     }
+
+
+while(HEIGHT<= 0 || HEIGHT >max_height);
