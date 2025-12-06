@@ -162,7 +162,17 @@ while (1)
                 scanf("%d %d", &x, &y);
                 erasePixel(x, y);
                 break;
-    }
+             case 3:
+                printf("Enter coordinates to fill (row col): ");
+                scanf("%d %d", &x, &y);
+                printf("Enter fill Character: ");
+                scanf(" %c", &color);
+                if (x >= 0 && x < HEIGHT && y >= 0 && y < WIDTH)
+                    fillArea(x, y, canvas[x][y], color);
+                else
+                    printf("Invalid coordinates!\n");
+                break;
+         }
 
 }
 
