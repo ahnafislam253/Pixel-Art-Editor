@@ -79,6 +79,7 @@ void clearCanvas()
         for (int j = 0; j < WIDTH; j++)
         {
             canvas[i][j] = '.';
+        }
     }
 }
 
