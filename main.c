@@ -87,8 +87,10 @@ void freeCanvas()
 
     for (int i =0; i< HEIGHT; i++) 
     {
-        free(canvas[i]);}
-        free(canvas);}
+        free(canvas[i]);
+    }
+        free(canvas);
+}
 
 void getCanvasDimensions() 
 {
@@ -186,7 +188,19 @@ while (1)
                 initCanvas();
                 printf("Canvas resized!\n");
                 break;
+
+            case 6:
+                printf("Exiting Pixel Art Editor...\n");
+                freeCanvas();  // Free memory before exiting
+                return 0;
+
+            default:
+                printf("Invalid choice! Press Enter to continue...\n");
+                getchar();
+                getchar();
          }
 
+}
+return 0;
 }
 
