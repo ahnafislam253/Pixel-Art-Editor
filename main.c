@@ -81,3 +81,8 @@ void clearCanvas()
     }
 }
 
+void freeCanvas(){
+
+    for (int i =0; i< HEIGHT; i++) {
+        free(canvas[i]);}
+        free(canvas);}
