@@ -87,3 +87,11 @@ void freeCanvas(){
         free(canvas[i]);}
         free(canvas);}
 
+void getCanvasDimensions() {
+    int max_width=80;
+    int max_height= 50;
+
+printf("Enter canvas dimensions (height width):\n");
+
+
+   
