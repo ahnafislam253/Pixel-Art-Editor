@@ -72,4 +72,12 @@ fillArea (x , y+1, target, replacement);
 fillArea(x , y-1, target, replacement);
 }
 
+void clearCanvas()
+{
+    for (int i = 0; i < HEIGHT; i++)
+    {
+        for (int j = 0; j < WIDTH; j++) {
+            canvas[i][j] = '.';
+    }
+}
 
