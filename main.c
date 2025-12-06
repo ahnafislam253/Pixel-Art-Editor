@@ -122,3 +122,6 @@ if (WIDTH <= 0 || WIDTH > max_width)
             {
             printf("Invalid width! Please enter between 1 and %d\n", max_width);
         }
+
+} while(WIDTH <= 0|| WIDTH >max_width);}
+
