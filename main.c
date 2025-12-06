@@ -111,3 +111,9 @@ do {
 
 
 while(HEIGHT<= 0 || HEIGHT >max_height);
+
+
+
+ do {
+            printf("Width (1-%d): ", max_width);
+        scanf("%d", &WIDTH);
