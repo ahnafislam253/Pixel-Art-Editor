@@ -183,7 +183,7 @@ while (1)
                 break;
 
             case 5:
-                freeCanvas();  // Free old canvas memory
+                freeCanvas();
                 getCanvasDimensions();
                 initCanvas();
                 printf("Canvas resized!\n");
@@ -191,7 +191,7 @@ while (1)
 
             case 6:
                 printf("Exiting Pixel Art Editor...\n");
-                freeCanvas();  // Free memory before exiting
+                freeCanvas();
                 return 0;
 
             default:
