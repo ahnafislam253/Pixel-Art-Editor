@@ -135,5 +135,19 @@ int main()
     printf("=== Pixel Art Editor ===\n\n");
     getCanvasDimensions();
     initCanvas();
+while (1)
+    {
+        displayCanvas();
+        printf("MENU:\n");
+        printf("1. Draw pixel\n");
+        printf("2. Erase pixel\n");
+        printf("3. Fill area\n");
+        printf("4. Clear canvas\n");
+        printf("5. Resize canvas\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+    }
+
 }
 
