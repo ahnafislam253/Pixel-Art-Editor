@@ -99,3 +99,7 @@ printf("Enter canvas dimensions (height width):\n");
 
 
   printf("Suggested maximum: %d x %d for good terminal display\n", max_height, max_width);  
+
+do {
+        printf("Height (1-%d): ", max_height);
+         scanf("%d", &HEIGHT);
