@@ -157,11 +157,13 @@ while (1)
                 scanf(" %c", &color);
                 drawPixel(x, y, color);
                 break;
+            
             case 2:
                 printf("Enter coordinates (row col): ");
                 scanf("%d %d", &x, &y);
                 erasePixel(x, y);
                 break;
+            
              case 3:
                 printf("Enter coordinates to fill (row col): ");
                 scanf("%d %d", &x, &y);
@@ -171,6 +173,18 @@ while (1)
                     fillArea(x, y, canvas[x][y], color);
                 else
                     printf("Invalid coordinates!\n");
+                break;
+            
+            case 4:
+                clearCanvas();
+                printf("Canvas cleared!\n");
+                break;
+
+            case 5:
+                freeCanvas();  // Free old canvas memory
+                getCanvasDimensions();
+                initCanvas();
+                printf("Canvas resized!\n");
                 break;
          }
 
