@@ -147,6 +147,21 @@ while (1)
         printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1:
+                printf("Enter coordinates (row col): ");
+                scanf("%d %d", &x, &y);
+                printf("Enter character: ");
+                scanf(" %c", &color);
+                drawPixel(x, y, color);
+                break;
+            case 2:
+                printf("Enter coordinates (row col): ");
+                scanf("%d %d", &x, &y);
+                erasePixel(x, y);
+                break;
     }
 
 }
