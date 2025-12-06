@@ -76,22 +76,26 @@ void clearCanvas()
 {
     for (int i = 0; i < HEIGHT; i++)
     {
-        for (int j = 0; j < WIDTH; j++) {
+        for (int j = 0; j < WIDTH; j++)
+        {
             canvas[i][j] = '.';
     }
 }
 
-void freeCanvas(){
+void freeCanvas()
+{
 
-    for (int i =0; i< HEIGHT; i++) {
+    for (int i =0; i< HEIGHT; i++) 
+    {
         free(canvas[i]);}
         free(canvas);}
 
-void getCanvasDimensions() {
+void getCanvasDimensions() 
+{
     int max_width=80;
     int max_height= 50;
 
 printf("Enter canvas dimensions (height width):\n");
 
 
-   
+  printf("Suggested maximum: %d x %d for good terminal display\n", max_height, max_width);  
