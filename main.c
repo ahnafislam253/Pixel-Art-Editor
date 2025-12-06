@@ -103,3 +103,8 @@ printf("Enter canvas dimensions (height width):\n");
 do {
         printf("Height (1-%d): ", max_height);
          scanf("%d", &HEIGHT);
+ if(HEIGHT <= 0 || HEIGHT > max_height){
+            printf("Invalid height! Please enter between 1 and %d\n", max_height);
+
+}
+    }
