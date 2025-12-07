@@ -23,7 +23,7 @@ void displayCanvas()
     printf("\n--- Pixel Art Editor ---\n");
     printf("Canvas Size: %d x %d\n\n", HEIGHT, WIDTH);
 
-    printf("   ");
+    printf("  ");
     for (int j = 0; j < WIDTH; j++) 
     {
         printf("%2d", j % 10);
