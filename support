@@ -1,1 +1,116 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 40
+#define HEIGHT 30
+
+char canvas[HEIGHT][WIDTH];
+
+void initCanvas() {
+    for (int i = 0; i < HEIGHT; i++)
+        for (int j = 0; j < WIDTH; j++)
+            canvas[i][j] = '.';
+}
+
+void displayCanvas() {
+    system("cls"); 
+    printf("\n--- Pixel Art Editor ---\n\n");
+    for (int i = 0; i < HEIGHT; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            printf("%c ", canvas[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+
+void drawPixel(int x, int y, char color) {
+    if (x >= 0 && x < HEIGHT && y >= 0 && y < WIDTH)
+        canvas[x][y] = color;
+    else
+        printf("Invalid coordinates!\n");
+}
+
+
+void erasePixel(int x, int y) {
+    if (x >= 0 && x < HEIGHT && y >= 0 && y < WIDTH)
+        canvas[x][y] = '.';
+    else
+        printf("Invalid coordinates!\n");
+}
+
+void fillArea(int x, int y, char target, char replacement) {
+    if (x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) return;
+    if (canvas[x][y] != target) return;
+    if (canvas[x][y] == replacement) return;
+
+    canvas[x][y] = replacement;
+
+    fillArea(x+1, y, target, replacement);
+    fillArea(x-1, y, target, replacement);
+    fillArea(x, y+1, target, replacement);
+    fillArea(x, y-1, target, replacement);
+}
+
+void clearCanvas() {
+    initCanvas();
+}
+
+int main() {
+    int choice, x, y;
+    char color;
+
+    initCanvas();
+
+    while (1) {
+        displayCanvas();
+        printf("1. Draw pixel\n");
+        printf("2. Erase pixel\n");
+        printf("3. Fill area\n");
+        printf("4. Clear canvas\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter coordinates (row col): ");
+                scanf("%d %d", &x, &y);
+                printf("Enter color character: ");
+                scanf(" %c", &color);
+                drawPixel(x, y, color);
+                break;
+
+            case 2:
+                printf("Enter coordinates (row col): ");
+                scanf("%d %d", &x, &y);
+                erasePixel(x, y);
+                break;
+
+            case 3:
+                printf("Enter coordinates to fill (row col): ");
+                scanf("%d %d", &x, &y);
+                printf("Enter fill color: ");
+                scanf(" %c", &color);
+                if (x >= 0 && x < HEIGHT && y >= 0 && y < WIDTH)
+                    fillArea(x, y, canvas[x][y], color);
+                else
+                    printf("Invalid coordinates!\n");
+                break;
+
+            case 4:
+                clearCanvas();
+                break;
+
+            case 5:
+                printf("Exiting Pixel Art Editor...\n");
+                return 0;
+
+            default:
+                printf("Invalid choice!\n");
+        }
+    }
+    return 0;
+}
 
