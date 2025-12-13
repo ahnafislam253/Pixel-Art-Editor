@@ -1,3 +1,6 @@
+PIXEL-ART-EDITOR
+
+
 A. Introduction
 A simple **Pixel Art Editor** developed using the **C programming language**. The application provides a lightweight, terminal-based environment for creating and manipulating pixel art through a command-line interface. Key contributions include an efficient flood-fill algorithm implementation using four-way recursion, dynamic memory management for canvas resizing, and a user-friendly menu-driven interface. 
 
@@ -53,3 +56,4 @@ H. Future Improvements
 - Save & load canvas from file.
 - Color support using ANSI escape codes.
 - Mouse-based input (advanced pixel editing).
+
