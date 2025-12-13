@@ -22,7 +22,7 @@ C. Concepts
 - Menu-driven user interface.
 - Modular programming using functions.
 
-  D. Working Procedure
+ D. Working Procedure
 - The canvas is stored as a **2D dynamic array of characters**.
 - Each cell initially contains `.` (dot).
 - Users interact through a menu.
@@ -56,4 +56,5 @@ H. Future Improvements
 - Save & load canvas from file.
 - Color support using ANSI escape codes.
 - Mouse-based input (advanced pixel editing).
+
 
