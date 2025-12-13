@@ -1,1 +1,7 @@
+C Compiler (Code::Blocks\GCC or compatible)
 
+Standard C Library (stdio.h, stdlib.h)
+
+Operating System: Windows (for system("cls"))
+
+Terminal / Command Prompt
